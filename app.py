@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index():  # put application's code here
+def index():
     return 'index'
 
 
 @app.route('/scores')
-def scores():  # put application's code here
+def scores():
     f = open('data/cases.xml', mode='rb')
     o = xmltodict.parse(f.read())
     f.close()
